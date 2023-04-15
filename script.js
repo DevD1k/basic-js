@@ -5,9 +5,9 @@ let arr = [
   { id: 2, name: "jack", age: "20", profession: "developer" },
   { id: 3, name: "karen", age: "19", profession: "admin" },
 ];
-console.log("---Using map method---");
+// console.log("---Using map method---");
 
-function PrintDeveloperbyMap(arr) {
+function PrintDeveloperbyMap() {
   //Write your code here , just console.log
   const developerList = arr.map((acc) => {
     if (acc.profession === "developer") return `${acc.name} is a developer.`;
@@ -17,22 +17,22 @@ function PrintDeveloperbyMap(arr) {
     if (list) console.log(list.toUpperCase());
   }
 }
-PrintDeveloperbyMap(arr);
+// PrintDeveloperbyMap(arr);
 
-console.log("---Using forEach method---");
+// console.log("---Using forEach method---");
 
-function PrintDeveloperbyForEach(arr) {
+function PrintDeveloperbyForEach() {
   //Write your code here , just console.log
   arr.forEach((acc) => {
     if (acc.profession === "developer")
       console.log(`${acc.name} is a developer.`.toUpperCase());
   });
 }
-PrintDeveloperbyForEach(arr);
+// PrintDeveloperbyForEach(arr);
 
-console.log("---To add element to array---");
+// console.log("---To add element to array---");
 
-function addData(arr) {
+function addData() {
   //Write your code here, just console.log
   arr.push({
     id: arr.length + 1,
@@ -42,20 +42,20 @@ function addData(arr) {
   });
   console.log(arr[arr.length - 1]);
 }
-addData(arr);
+// addData(arr);
 
-console.log("---to remove a certain array element---");
+// console.log("---to remove a certain array element---");
 
-function removeAdmin(arr) {
+function removeAdmin() {
   //Write your code here, just console.log
   arr.forEach((acc, index, array) => {
     if (acc.profession === "admin") array.splice(index, 1);
   });
   console.log(arr);
 }
-removeAdmin(arr);
+// removeAdmin(arr);
 
-console.log("---to make a new concatinated array");
+// console.log("---to make a new concatinated array");
 
 let arr2 = [
   { id: 5, name: "jerome", age: "78", profession: "developer" },
@@ -63,9 +63,8 @@ let arr2 = [
   { id: 7, name: "aron", age: "89", profession: "admin" },
 ];
 
-function concatenateArray(a1, a2) {
+function concatenateArray() {
   //Write your code here, just console.log
-  return a1.concat(a2);
+  let newArray = arr.concat(arr2);
+  console.log(newArray);
 }
-let newArray = concatenateArray(arr, arr2);
-console.log(newArray);
